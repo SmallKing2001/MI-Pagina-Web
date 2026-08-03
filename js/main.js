@@ -242,12 +242,12 @@ document.querySelectorAll('.fade-in:not(.product-card):not(.category-card)').for
 // ========================================
 // 13. MOBILE MENU
 // ========================================
-document.querySelector('.mobile-menu-btn')?.addEventListener('click', function() {
-    const navLinks = document.querySelector('.nav-links');
-    if (navLinks) {
-        navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-    }
-});
+// document.querySelector('.mobile-menu-btn')?.addEventListener('click', function() {
+//    const navLinks = document.querySelector('.nav-links');
+//    if (navLinks) {
+//        navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+//    }
+//});
 
 document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
@@ -267,6 +267,63 @@ document.addEventListener('DOMContentLoaded', () => {
         resetBtn.addEventListener('click', resetFilter);
     }
     cargarOfertas();
+});
+
+// ========================================
+// 15. MENÚ MÓVIL MEJORADO
+// ========================================
+
+function toggleMenu() {
+    const navLinks = document.getElementById('navLinks');
+    const menuBtn = document.getElementById('menuBtn');
+    
+    navLinks.classList.toggle('active');
+    menuBtn.classList.toggle('active');
+    
+    // Cambiar el ícono del botón
+    const icon = menuBtn.querySelector('i');
+    if (navLinks.classList.contains('active')) {
+        icon.className = 'fas fa-times';
+        document.body.style.overflow = 'hidden'; // Evitar scroll
+    } else {
+        icon.className = 'fas fa-bars';
+        document.body.style.overflow = '';
+    }
+}
+
+function cerrarMenu() {
+    const navLinks = document.getElementById('navLinks');
+    const menuBtn = document.getElementById('menuBtn');
+    
+    navLinks.classList.remove('active');
+    menuBtn.classList.remove('active');
+    
+    const icon = menuBtn.querySelector('i');
+    icon.className = 'fas fa-bars';
+    document.body.style.overflow = '';
+}
+
+// Cerrar menú al hacer clic fuera (opcional)
+document.addEventListener('click', function(e) {
+    const navLinks = document.getElementById('navLinks');
+    const menuBtn = document.getElementById('menuBtn');
+    
+    if (navLinks.classList.contains('active')) {
+        const isClickInside = navLinks.contains(e.target) || menuBtn.contains(e.target);
+        if (!isClickInside) {
+            cerrarMenu();
+        }
+    }
+});
+
+// Cerrar menú al redimensionar a desktop
+window.addEventListener('resize', function() {
+    if (window.innerWidth > 768) {
+        const navLinks = document.getElementById('navLinks');
+        if (navLinks.classList.contains('active')) {
+            cerrarMenu();
+        }
+    }
 });
 
 // ========================================

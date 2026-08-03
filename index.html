@@ -16,26 +16,38 @@
 </head>
 <body>
 
-    <!-- ===== NAVEGACIÓN ===== -->
-    <nav id="navbar">
-        <div class="nav-container">
-            <a href="#" class="logo">
-                <span class="logo-icon"><i class="fas fa-tags"></i></span>
-                Descuentos Pro
-            </a>
-            <ul class="nav-links">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#categorias">Categorías</a></li>
-                <li><a href="#ofertas">Ofertas</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-                <li><span class="nav-avatar">RF</span></li>
-            </ul>
-            <button class="mobile-menu-btn" aria-label="Menú">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
-    </nav>
-
+<!-- ===== NAVEGACIÓN ===== -->
+<nav id="navbar">
+    <div class="nav-container">
+        <a href="#" class="logo">
+            <span class="logo-icon"><i class="fas fa-tags"></i></span>
+            Descuentos Pro
+        </a>
+        
+        <ul class="nav-links" id="navLinks">
+            <!-- Avatar en móvil (se muestra solo en móvil) -->
+            <li class="nav-avatar-mobile">RF</li>
+            
+            <!-- Enlaces -->
+            <li><a href="#inicio" onclick="cerrarMenu()">Inicio</a></li>
+            <li><a href="#categorias" onclick="cerrarMenu()">Categorías</a></li>
+            <li><a href="#ofertas" onclick="cerrarMenu()">Ofertas</a></li>
+            <li><a href="#contacto" onclick="cerrarMenu()">Contacto</a></li>
+            
+            <!-- Avatar en desktop -->
+            <li><span class="nav-avatar">RF</span></li>
+            
+            <!-- Botón cerrar en móvil -->
+            <li class="close-menu-btn" onclick="cerrarMenu()">
+                <i class="fas fa-times"></i>
+            </li>
+        </ul>
+        
+        <button class="mobile-menu-btn" id="menuBtn" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+</nav>
     <!-- ===== HERO ===== -->
     <section class="hero" id="inicio">
         <div class="hero-content">
