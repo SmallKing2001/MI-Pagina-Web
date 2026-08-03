@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descuentos Pro · Javier Díaz</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ===== NAVEGACIÓN ===== -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-icon"><i class="fas fa-tags"></i></span>
+                Descuentos Pro
+            </a>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#categorias">Categorías</a></li>
+                <li><a href="#ofertas">Ofertas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><span class="nav-avatar">JD</span></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Menú">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-fire"></i> Javier Díaz · Códigos verificados
+            </div>
+            <h1>Los mejores descuentos en un solo lugar</h1>
+            <p>Selección personal de códigos promocionales de los proveedores más confiables. Ahorra con estilo.</p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number" id="totalOfertas">0</div>
+                    <div class="stat-label">Ofertas activas</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="totalProveedores">0</div>
+                    <div class="stat-label">Proveedores</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Gratuito</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CATEGORÍAS ===== -->
+    <section id="categorias">
+        <div class="section-header fade-in">
+            <h2>Explora por categoría</h2>
+            <p>Encuentra ofertas organizadas para que ahorres en lo que realmente necesitas.</p>
+        </div>
+        <div class="categories-grid" id="categoriesGrid">
+            <!-- Generado dinámicamente desde JavaScript -->
+        </div>
+    </section>
+
+    <!-- ===== OFERTAS ===== -->
+    <section id="ofertas">
+        <div class="section-header fade-in">
+            <h2>Ofertas activas</h2>
+            <p>Códigos de descuento actualizados de tus proveedores favoritos.</p>
+        </div>
+        <div class="products-grid" id="productsGrid">
+            <div class="loading">
+                <i class="fas fa-spinner fa-spin"></i>
+                <p>Cargando ofertas...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACTO / NEWSLETTER ===== -->
+    <section id="contacto">
+        <div class="section-header fade-in">
+            <h2>Recibe las mejores ofertas</h2>
+            <p>Suscríbete y recibe los códigos más exclusivos directamente en tu correo.</p>
+        </div>
+        <div class="newsletter-container">
+            <!-- Formulario con Formspree (reemplaza TU_ID) -->
+            <form action="https://formspree.io/f/TU_ID_AQUI" method="POST" class="newsletter-form">
+                <input type="email" name="email" placeholder="tu@email.com" required>
+                <button type="submit">
+                    <i class="fas fa-paper-plane"></i> Suscribirme
+                </button>
+            </form>
+            <p class="newsletter-note">
+                <i class="fas fa-lock"></i> Sin spam, solo ofertas. Puedes darte de baja cuando quieras.
+            </p>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo" style="font-size:1.2rem;">
+                        <span class="logo-icon"><i class="fas fa-tags"></i></span>
+                        Descuentos Pro
+                    </a>
+                    <p>Selección personal de códigos de descuento de los mejores proveedores. Ahorra con confianza.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-telegram-plane"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Proveedores</h4>
+                    <ul id="footerProveedores">
+                        <!-- Generado dinámicamente -->
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Aviso legal</a></li>
+                        <li><a href="#">Política de privacidad</a></li>
+                        <li><a href="#">Cookies</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 · Javier Díaz · Descuentos Pro</span>
+                <span><i class="fas fa-heart" style="color:#ef4444;"></i> Códigos verificados</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== TOAST NOTIFICATION ===== -->
+    <div class="toast" id="toast">
+        <div class="toast-icon"><i class="fas fa-check"></i></div>
+        <div class="toast-content">
+            <h4 id="toast-title">¡Código copiado!</h4>
+            <p id="toast-message">El código está listo para usar.</p>
+        </div>
+    </div>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script src="js/main.js"></script>
+
+</body>
+</html>

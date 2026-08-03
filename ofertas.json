@@ -1,0 +1,98 @@
+[
+  {
+    "proveedor": "TechWorld",
+    "categoria": "Tecnología",
+    "producto": "Portátiles y monitores",
+    "descripcion": "Gaming y productividad. Envío gratis desde 50€.",
+    "codigo": "TECH20",
+    "descuento": "-20%",
+    "fecha_expiracion": "31 Ago 2026",
+    "enlace": "https://techworld.com/oferta-portatiles",
+    "icono": "fa-laptop-code",
+    "destacado": true
+  },
+  {
+    "proveedor": "UrbanStyle",
+    "categoria": "Moda",
+    "producto": "Ropa urbana",
+    "descripcion": "Zapatillas y complementos de edición limitada.",
+    "codigo": "URBAN15",
+    "descuento": "-15%",
+    "fecha_expiracion": "15 Ago 2026",
+    "enlace": "https://urbanstyle.com/ropa-urbana",
+    "icono": "fa-tshirt",
+    "destacado": false
+  },
+  {
+    "proveedor": "Hogar & Deco",
+    "categoria": "Hogar",
+    "producto": "Muebles y lámparas",
+    "descripcion": "Estilo nórdico, envío incluido en pedidos grandes.",
+    "codigo": "CASA10",
+    "descuento": "-10%",
+    "fecha_expiracion": "20 Ago 2026",
+    "enlace": "https://hogar-deco.com/muebles",
+    "icono": "fa-couch",
+    "destacado": false
+  },
+  {
+    "proveedor": "Libros & Mentes",
+    "categoria": "Libros",
+    "producto": "eBooks y clásicos",
+    "descripcion": "Novedades editoriales con descuento acumulable.",
+    "codigo": "LEE25",
+    "descuento": "-25%",
+    "fecha_expiracion": "28 Ago 2026",
+    "enlace": "https://librosymentes.com/ebooks",
+    "icono": "fa-book-open",
+    "destacado": false
+  },
+  {
+    "proveedor": "AudioPro",
+    "categoria": "Tecnología",
+    "producto": "Auriculares y altavoces",
+    "descripcion": "Sonido profesional, calidad de estudio.",
+    "codigo": "AUDIO30",
+    "descuento": "-30%",
+    "fecha_expiracion": "10 Sep 2026",
+    "enlace": "https://audiopro.com/auriculares",
+    "icono": "fa-headphones",
+    "destacado": true
+  },
+  {
+    "proveedor": "FitLife",
+    "categoria": "Deportes",
+    "producto": "Ropa y suplementos",
+    "descripcion": "Entrena con estilo, accesorios de alto rendimiento.",
+    "codigo": "FIT12",
+    "descuento": "-12%",
+    "fecha_expiracion": "5 Sep 2026",
+    "enlace": "https://fitlife.com/ropa-deportiva",
+    "icono": "fa-dumbbell",
+    "destacado": false
+  },
+  {
+    "proveedor": "FotoLens",
+    "categoria": "Tecnología",
+    "producto": "Cámaras y lentes",
+    "descripcion": "Kits de fotografía profesional con descuento.",
+    "codigo": "FOTO18",
+    "descuento": "-18%",
+    "fecha_expiracion": "25 Ago 2026",
+    "enlace": "https://fotolens.com/camaras",
+    "icono": "fa-camera-retro",
+    "destacado": false
+  },
+  {
+    "proveedor": "Vino & Terruño",
+    "categoria": "Alimentación",
+    "producto": "Vinos y cavas",
+    "descripcion": "Caja sorpresa con 15% off y regalo adicional.",
+    "codigo": "VINO15",
+    "descuento": "-15%",
+    "fecha_expiracion": "30 Ago 2026",
+    "enlace": "https://vinoterruno.com/vinos",
+    "icono": "fa-wine-glass-alt",
+    "destacado": false
+  }
+]
