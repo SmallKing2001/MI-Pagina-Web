@@ -122,7 +122,7 @@ function renderizarCategorias(ofertas) {
     }
 
     grid.innerHTML = Object.keys(categorias).map((cat, index) => `
-        <div class="category-card fade-in" style="transition-delay: ${index * 0.08}s; cursor: pointer;" onclick="filtrarPorCategoria('${cat}')">
+        <div class="category-card fade-in" style="transition-delay: ${index * 0.08}s;" onclick="filtrarPorCategoria('${cat}')">
             <i class="fas ${iconos[cat] || 'fa-tag'}"></i>
             <h4>${cat}</h4>
             <span>${categorias[cat]} oferta${categorias[cat] > 1 ? 's' : ''}</span>

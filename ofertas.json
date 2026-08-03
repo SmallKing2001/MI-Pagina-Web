@@ -7,7 +7,7 @@
     "codigo": "TECH20",
     "descuento": "-20%",
     "fecha_expiracion": "31 Ago 2026",
-    "enlace": "https://techworld.com/oferta-portatiles",
+    "enlace": "#",
     "icono": "fa-laptop-code",
     "destacado": true
   },
@@ -19,7 +19,7 @@
     "codigo": "URBAN15",
     "descuento": "-15%",
     "fecha_expiracion": "15 Ago 2026",
-    "enlace": "https://urbanstyle.com/ropa-urbana",
+    "enlace": "#",
     "icono": "fa-tshirt",
     "destacado": false
   },
@@ -31,7 +31,7 @@
     "codigo": "CASA10",
     "descuento": "-10%",
     "fecha_expiracion": "20 Ago 2026",
-    "enlace": "https://hogar-deco.com/muebles",
+    "enlace": "#",
     "icono": "fa-couch",
     "destacado": false
   },
@@ -43,7 +43,7 @@
     "codigo": "LEE25",
     "descuento": "-25%",
     "fecha_expiracion": "28 Ago 2026",
-    "enlace": "https://librosymentes.com/ebooks",
+    "enlace": "#",
     "icono": "fa-book-open",
     "destacado": false
   },
@@ -55,7 +55,7 @@
     "codigo": "AUDIO30",
     "descuento": "-30%",
     "fecha_expiracion": "10 Sep 2026",
-    "enlace": "https://audiopro.com/auriculares",
+    "enlace": "#",
     "icono": "fa-headphones",
     "destacado": true
   },
@@ -67,7 +67,7 @@
     "codigo": "FIT12",
     "descuento": "-12%",
     "fecha_expiracion": "5 Sep 2026",
-    "enlace": "https://fitlife.com/ropa-deportiva",
+    "enlace": "#",
     "icono": "fa-dumbbell",
     "destacado": false
   },
@@ -79,7 +79,7 @@
     "codigo": "FOTO18",
     "descuento": "-18%",
     "fecha_expiracion": "25 Ago 2026",
-    "enlace": "https://fotolens.com/camaras",
+    "enlace": "#",
     "icono": "fa-camera-retro",
     "destacado": false
   },
@@ -91,7 +91,7 @@
     "codigo": "VINO15",
     "descuento": "-15%",
     "fecha_expiracion": "30 Ago 2026",
-    "enlace": "https://vinoterruno.com/vinos",
+    "enlace": "#",
     "icono": "fa-wine-glass-alt",
     "destacado": false
   }
