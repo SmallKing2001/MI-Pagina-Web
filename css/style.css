@@ -829,3 +829,19 @@ footer {
         width: 100%;
     }
 }
+
+/* ========================================
+   BOTÓN RESET FILTRO
+   ======================================== */
+#resetFilterBtn {
+    transition: all 0.3s ease;
+}
+
+#resetFilterBtn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+}
+
+#resetFilterBtn i {
+    margin-right: 0.5rem;
+}
