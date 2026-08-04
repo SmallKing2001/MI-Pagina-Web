@@ -59,19 +59,4 @@
     "imagen": "img/Calzones.jpg",
     "destacado": false
   },
-  {
-    "proveedor": "Xiaomi",
-    "categoria": "Tecnología",
-    "producto": "Smartphones y gadgets",
-    "descripcion": "Tecnología punta a precios increíbles.",
-    "codigo": "",
-    "tipo_oferta": "afiliado",
-    "descuento": "-15%",
-    "fecha_expiracion": "10 Sep 2026",
-    "enlace": "https://www.mi.com/es/affiliate?ref=robert",
-    "enlace_texto": "Ver productos",
-    "icono": "fa-mobile-alt",
-    "imagen": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400",
-    "destacado": false
-  }
 ]
