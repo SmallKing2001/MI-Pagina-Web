@@ -89,16 +89,7 @@ function renderizarOfertas(ofertas) {
                         <i class="fas fa-copy"></i> Copiar
                     </button>
                 </div>
-                ` : `
-                <div class="code-box" style="border-color: rgba(245,158,11,0.3); background: rgba(245,158,11,0.05);">
-                    <span style="color: var(--text-muted); font-size:0.85rem;">
-                        <i class="fas fa-link" style="color: var(--secondary);"></i> Oferta sin código
-                    </span>
-                    <a href="${enlace}" target="_blank" class="copy-btn" style="text-decoration:none; background: var(--gradient-2);">
-                        <i class="fas fa-arrow-right"></i> Ver
-                    </a>
-                </div>
-                `}
+                ` : ''}
 
                 <div class="product-footer">
                     <span class="expiry"><i class="fas fa-clock"></i> ${o.fecha_expiracion}</span>
