@@ -45,18 +45,18 @@
     "destacado": true
   },
   {
-    "proveedor": "Shein",
-    "categoria": "Moda",
-    "producto": "Ropa de verano",
-    "descripcion": "Colección 2026 con descuentos exclusivos.",
-    "codigo": "SHEIN20",
-    "tipo_oferta": "codigo",
-    "descuento": "-20%",
+    "proveedor": "Calvin Klein",
+    "categoria": "Ropa Interior",
+    "producto": "Calzones Marca Calvin Klein",
+    "descripcion": "Calzones tipo hipster costuras Invisibles para mujer.",
+    "codigo": "",
+    "tipo_oferta": "Afiliado",
+    "descuento": "Oferta",
     "fecha_expiracion": "30 Ago 2026",
-    "enlace": "https://www.shein.com/affiliate?ref=robert",
-    "enlace_texto": "Ir a Shein",
+    "enlace": "https://amzn.to/4fS6Tzp",
+    "enlace_texto": "Ver Calzones",
     "icono": "fa-tshirt",
-    "imagen": "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=400",
+    "imagen": "img/Calzones.jpg",
     "destacado": false
   },
   {
