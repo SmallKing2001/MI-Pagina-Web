@@ -1,17 +1,17 @@
 [
   {
-    "proveedor": "TechWorld",
+    "proveedor": "Amazon",
     "categoria": "Tecnología",
-    "producto": "Portátiles y monitores",
-    "descripcion": "Gaming y productividad. Envío gratis desde 50€.",
-    "codigo": "TECH20",
+    "producto": "Procesador",
+    "descripcion": "Gaming y productividad",
+    "codigo": "",
     "tipo_oferta": "codigo",
     "descuento": "-20%",
-    "fecha_expiracion": "31 Ago 2026",
-    "enlace": "https://www.techworld.com/affiliate?ref=robert",
+    "fecha_expiracion": "31 Agosto 2026",
+    "enlace": "https://amzn.to/457rfQd",
     "enlace_texto": "Ver oferta",
     "icono": "fa-laptop-code",
-    "imagen": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=400",
+    "imagen": "img/procesadorRyzen.png",
     "destacado": true
   },
   {
