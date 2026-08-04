@@ -50,7 +50,7 @@
     "producto": "Calzones Marca Calvin Klein",
     "descripcion": "Calzones tipo hipster costuras Invisibles para mujer.",
     "codigo": "",
-    "tipo_oferta": "Afiliado",
+    "tipo_oferta": "afiliado",
     "descuento": "Oferta",
     "fecha_expiracion": "30 Ago 2026",
     "enlace": "https://amzn.to/4fS6Tzp",
@@ -58,5 +58,5 @@
     "icono": "fa-tshirt",
     "imagen": "img/Calzones.jpg",
     "destacado": false
-  },
+  }
 ]
