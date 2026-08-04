@@ -30,19 +30,19 @@
     "destacado": true
   },
   {
-    "proveedor": "Adidas",
-    "categoria": "Moda",
-    "producto": "Zapatillas Ultraboost",
-    "descripcion": "Edición limitada. Envío gratis en tu primer pedido.",
+    "proveedor": "CRIPOM",
+    "categoria": "Ropa Interior",
+    "producto": "Babydoll",
+    "descripcion": "Edición limitada",
     "codigo": "",
     "tipo_oferta": "afiliado",
-    "descuento": "-25%",
-    "fecha_expiracion": "20 Ago 2026",
-    "enlace": "https://www.adidas.es/ultraboost?affiliate=robert",
-    "enlace_texto": "Ver zapatillas",
+    "descuento": "Oferta",
+    "fecha_expiracion": "31 Ago 2026",
+    "enlace": "https://amzn.to/4gbMC9h",
+    "enlace_texto": "Ver Babydoll",
     "icono": "fa-shoe-prints",
-    "imagen": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400",
-    "destacado": false
+    "imagen": "img/Babydoll.jpg",
+    "destacado": true
   },
   {
     "proveedor": "Shein",
