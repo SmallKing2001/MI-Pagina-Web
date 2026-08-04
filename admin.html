@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración · Descuentos Pro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0f172a;
+            color: #f1f5f9;
+            padding: 2rem;
+        }
+        .container { max-width: 1000px; margin: 0 auto; }
+        h1 { margin-bottom: 2rem; color: #818cf8; }
+        .form-group { margin-bottom: 1.2rem; }
+        label { display: block; font-weight: 600; margin-bottom: 0.3rem; color: #94a3b8; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; }
+        input, select, textarea {
+            width: 100%;
+            padding: 0.7rem 1rem;
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 8px;
+            color: #f1f5f9;
+            font-size: 0.95rem;
+            transition: border-color 0.2s;
+        }
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #6366f1;
+        }
+        .row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        .btn {
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .btn-primary { background: linear-gradient(135deg, #6366f1, #8b5cf6); color: white; }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(99,102,241,0.3); }
+        .btn-success { background: #10b981; color: white; }
+        .btn-danger { background: #ef4444; color: white; }
+        .btn-warning { background: #f59e0b; color: white; }
+        .preview-json {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            max-height: 500px;
+            overflow: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 0.8rem;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.5rem; }
+        .help-text { color: #94a3b8; font-size: 0.8rem; margin-top: 0.3rem; }
+        .checkbox-group { display: flex; align-items: center; gap: 0.5rem; }
+        .checkbox-group input { width: auto; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1><i class="fas fa-tags"></i> Panel de Administración</h1>
+    
+    <div style="background:#1e293b; border-radius:16px; padding:2rem; border:1px solid #334155;">
+        <h2 style="margin-bottom:1.5rem; font-size:1.3rem;">Agregar / Editar Oferta</h2>
+        
+        <div class="row">
+            <div class="form-group">
+                <label>Proveedor</label>
+                <input id="proveedor" placeholder="Ej: Amazon, TechWorld...">
+            </div>
+            <div class="form-group">
+                <label>Categoría</label>
+                <select id="categoria">
+                    <option value="Tecnología">Tecnología</option>
+                    <option value="Moda">Moda</option>
+                    <option value="Hogar">Hogar</option>
+                    <option value="Deportes">Deportes</option>
+                    <option value="Viajes">Viajes</option>
+                    <option value="Libros">Libros</option>
+                    <option value="Alimentación">Alimentación</option>
+                    <option value="Electrónica">Electrónica</option>
+                    <option value="Otros">Otros</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label>Producto</label>
+            <input id="producto" placeholder="Nombre del producto o servicio">
+        </div>
+        
+        <div class="form-group">
+            <label>Descripción</label>
+            <textarea id="descripcion" rows="2" placeholder="Breve descripción de la oferta"></textarea>
+        </div>
+        
+        <div class="row">
+            <div class="form-group">
+                <label>Tipo de Oferta</label>
+                <select id="tipo_oferta">
+                    <option value="codigo">Código de descuento</option>
+                    <option value="afiliado">Enlace de afiliado (sin código)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Código (opcional)</label>
+                <input id="codigo" placeholder="Ej: TECH20 (dejar vacío si es afiliado)">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="form-group">
+                <label>Descuento</label>
+                <input id="descuento" placeholder="Ej: -20%, 20% OFF">
+            </div>
+            <div class="form-group">
+                <label>Fecha de expiración</label>
+                <input id="fecha_expiracion" placeholder="Ej: 31 Ago 2026">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="form-group">
+                <label>Enlace (URL)</label>
+                <input id="enlace" placeholder="https://...">
+            </div>
+            <div class="form-group">
+                <label>Texto del enlace</label>
+                <input id="enlace_texto" placeholder="Ver oferta, Comprar ahora...">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="form-group">
+                <label>URL de imagen</label>
+                <input id="imagen" placeholder="https://images.unsplash.com/...">
+            </div>
+            <div class="form-group">
+                <label>Icono (FontAwesome)</label>
+                <input id="icono" placeholder="fa-laptop-code, fa-tv...">
+            </div>
+        </div>
+        
+        <div style="display:flex; gap:2rem; flex-wrap:wrap; margin:1rem 0;">
+            <div class="checkbox-group">
+                <input type="checkbox" id="destacado">
+                <label style="font-weight:400; text-transform:none; color:#f1f5f9; margin:0;">⭐ Destacado</label>
+            </div>
+        </div>
+        
+        <div class="actions">
+            <button class="btn btn-primary" onclick="agregarOferta()"><i class="fas fa-plus"></i> Agregar Oferta</button>
+            <button class="btn btn-success" onclick="descargarJSON()"><i class="fas fa-download"></i> Descargar JSON</button>
+            <button class="btn btn-warning" onclick="verJSON()"><i class="fas fa-eye"></i> Ver JSON</button>
+            <button class="btn btn-danger" onclick="limpiarFormulario()"><i class="fas fa-trash"></i> Limpiar</button>
+        </div>
+    </div>
+    
+    <div id="jsonPreview" class="preview-json" style="display:none;">
+        <strong style="color:#818cf8;">📄 Vista previa del JSON:</strong><br>
+        <pre id="jsonContent" style="margin-top:0.5rem;"></pre>
+    </div>
+    
+    <div style="margin-top:2rem; padding:1.5rem; background:#1e293b; border-radius:12px; border:1px solid #334155;">
+        <h3 style="color:#94a3b8; font-size:0.9rem; text-transform:uppercase; letter-spacing:0.05em;">📋 Ofertas actuales (<span id="contadorOfertas">0</span>)</h3>
+        <div id="listaOfertas" style="margin-top:1rem; max-height:300px; overflow:auto;"></div>
+    </div>
+</div>
+
+<script>
+// ========================================
+// PANEL DE ADMINISTRACIÓN
+// ========================================
+
+let ofertas = [];
+
+// Cargar ofertas desde localStorage o JSON inicial
+function cargarOfertas() {
+    const guardado = localStorage.getItem('ofertas_admin');
+    if (guardado) {
+        try {
+            ofertas = JSON.parse(guardado);
+        } catch(e) {
+            ofertas = [];
+        }
+    } else {
+        // Cargar ofertas iniciales desde el JSON de ejemplo
+        fetch('ofertas.json')
+            .then(res => res.json())
+            .then(data => {
+                ofertas = data;
+                localStorage.setItem('ofertas_admin', JSON.stringify(ofertas));
+                actualizarLista();
+            })
+            .catch(() => {
+                ofertas = [];
+                actualizarLista();
+            });
+        return;
+    }
+    actualizarLista();
+}
+
+function actualizarLista() {
+    const container = document.getElementById('listaOfertas');
+    const contador = document.getElementById('contadorOfertas');
+    contador.textContent = ofertas.length;
+    
+    if (ofertas.length === 0) {
+        container.innerHTML = '<p style="color:#94a3b8;">No hay ofertas agregadas aún.</p>';
+        return;
+    }
+    
+    container.innerHTML = ofertas.map((o, i) => `
+        <div style="display:flex; justify-content:space-between; align-items:center; padding:0.6rem 0; border-bottom:1px solid #334155;">
+            <div>
+                <strong style="color:#f1f5f9;">${o.producto}</strong>
+                <span style="color:#94a3b8; font-size:0.8rem; margin-left:0.5rem;">${o.proveedor}</span>
+                <span style="background:#6366f1; padding:0.1rem 0.6rem; border-radius:4px; font-size:0.7rem; margin-left:0.5rem;">${o.descuento}</span>
+            </div>
+            <div>
+                <button class="btn" style="padding:0.2rem 0.8rem; font-size:0.7rem; background:#f59e0b; color:white;" onclick="editarOferta(${i})"><i class="fas fa-edit"></i></button>
+                <button class="btn" style="padding:0.2rem 0.8rem; font-size:0.7rem; background:#ef4444; color:white;" onclick="eliminarOferta(${i})"><i class="fas fa-trash"></i></button>
+            </div>
+        </div>
+    `).join('');
+}
+
+function agregarOferta() {
+    const nueva = {
+        proveedor: document.getElementById('proveedor').value || 'Sin proveedor',
+        categoria: document.getElementById('categoria').value,
+        producto: document.getElementById('producto').value || 'Producto sin nombre',
+        descripcion: document.getElementById('descripcion').value || 'Descripción pendiente',
+        codigo: document.getElementById('codigo').value || '',
+        tipo_oferta: document.getElementById('tipo_oferta').value,
+        descuento: document.getElementById('descuento').value || '-0%',
+        fecha_expiracion: document.getElementById('fecha_expiracion').value || '31 Dic 2026',
+        enlace: document.getElementById('enlace').value || '#',
+        enlace_texto: document.getElementById('enlace_texto').value || 'Ver oferta',
+        imagen: document.getElementById('imagen').value || '',
+        icono: document.getElementById('icono').value || 'fa-tag',
+        destacado: document.getElementById('destacado').checked
+    };
+    
+    ofertas.push(nueva);
+    localStorage.setItem('ofertas_admin', JSON.stringify(ofertas));
+    actualizarLista();
+    limpiarFormulario();
+    showToast('✅ Oferta agregada correctamente');
+}
+
+function eliminarOferta(index) {
+    if (confirm('¿Eliminar esta oferta?')) {
+        ofertas.splice(index, 1);
+        localStorage.setItem('ofertas_admin', JSON.stringify(ofertas));
+        actualizarLista();
+        showToast('🗑️ Oferta eliminada');
+    }
+}
+
+function editarOferta(index) {
+    const o = ofertas[index];
+    document.getElementById('proveedor').value = o.proveedor;
+    document.getElementById('categoria').value = o.categoria;
+    document.getElementById('producto').value = o.producto;
+    document.getElementById('descripcion').value = o.descripcion;
+    document.getElementById('codigo').value = o.codigo || '';
+    document.getElementById('tipo_oferta').value = o.tipo_oferta || 'codigo';
+    document.getElementById('descuento').value = o.descuento;
+    document.getElementById('fecha_expiracion').value = o.fecha_expiracion;
+    document.getElementById('enlace').value = o.enlace || '#';
+    document.getElementById('enlace_texto').value = o.enlace_texto || 'Ver oferta';
+    document.getElementById('imagen').value = o.imagen || '';
+    document.getElementById('icono').value = o.icono || 'fa-tag';
+    document.getElementById('destacado').checked = o.destacado || false;
+    
+    // Eliminar la oferta para reemplazarla
+    ofertas.splice(index, 1);
+    localStorage.setItem('ofertas_admin', JSON.stringify(ofertas));
+    actualizarLista();
+    showToast('✏️ Editando oferta... modifica y agrega de nuevo');
+}
+
+function limpiarFormulario() {
+    document.getElementById('proveedor').value = '';
+    document.getElementById('categoria').value = 'Tecnología';
+    document.getElementById('producto').value = '';
+    document.getElementById('descripcion').value = '';
+    document.getElementById('codigo').value = '';
+    document.getElementById('tipo_oferta').value = 'codigo';
+    document.getElementById('descuento').value = '';
+    document.getElementById('fecha_expiracion').value = '';
+    document.getElementById('enlace').value = '';
+    document.getElementById('enlace_texto').value = '';
+    document.getElementById('imagen').value = '';
+    document.getElementById('icono').value = 'fa-tag';
+    document.getElementById('destacado').checked = false;
+}
+
+function verJSON() {
+    const preview = document.getElementById('jsonPreview');
+    const content = document.getElementById('jsonContent');
+    content.textContent = JSON.stringify(ofertas, null, 2);
+    preview.style.display = 'block';
+}
+
+function descargarJSON() {
+    const blob = new Blob([JSON.stringify(ofertas, null, 2)], {type: 'application/json'});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'ofertas.json';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    showToast('📥 JSON descargado');
+}
+
+function showToast(msg) {
+    const existing = document.querySelector('.toast-admin');
+    if (existing) existing.remove();
+    const div = document.createElement('div');
+    div.className = 'toast-admin';
+    div.style.cssText = `
+        position: fixed; bottom: 2rem; right: 2rem;
+        background: #1e293b; border: 1px solid #6366f1;
+        padding: 1rem 1.5rem; border-radius: 12px;
+        color: #f1f5f9; box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        z-index: 9999; animation: slideUp 0.3s ease;
+    `;
+    div.textContent = msg;
+    document.body.appendChild(div);
+    setTimeout(() => div.remove(), 3000);
+}
+
+// Agregar animación
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes slideUp {
+        from { transform: translateY(20px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+    }
+`;
+document.head.appendChild(style);
+
+// Iniciar
+cargarOfertas();
+</script>
+</body>
+</html>
